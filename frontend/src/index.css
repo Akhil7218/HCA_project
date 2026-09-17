@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #09090b;
+    --card-bg: #121215;
+    --border-main: #27272a;
+  }
+  
+  body {
+    background-color: #09090b;
+    color: #f4f4f5;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+}
+
+/* DICOM PACS Viewport */
+.pacs-viewport {
+  background-color: #050507;
+  border: 1px solid #27272a;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* Tabular Monospace Fonts for Metrics */
+.font-mono-tabular {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Printable PDF stylesheet styling */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .pacs-card {
+    background: #ffffff !important;
+    border: 1px solid #e4e4e7 !important;
+    box-shadow: none !important;
+    color: #000000 !important;
+  }
+}

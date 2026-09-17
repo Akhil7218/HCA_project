@@ -160,6 +160,4 @@ HCA_project/
 
 ---
 
-## License
 
-This project is created for educational and research purposes in clinical AI decision support systems.

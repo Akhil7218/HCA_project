@@ -133,12 +133,6 @@ export default function ClinicalReportCard({ reportText }) {
         </div>
       )}
 
-      {/* Medical Footer */}
-      <div className="pt-2 text-[11px] text-slate-500 flex justify-between items-center no-print">
-        <span>Report Generated: {new Date().toLocaleString()}</span>
-        <span>PneumoScan AI Diagnostic Assistance Engine</span>
-      </div>
-
     </div>
   );
 }

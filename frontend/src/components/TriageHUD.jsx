@@ -73,7 +73,7 @@ export default function TriageHUD({ data }) {
       </div>
 
       {/* Metrics HUD Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         
         {/* Card 1: Primary Diagnosis */}
         <div className="glass-card rounded-2xl p-5 border border-slate-800 flex flex-col justify-between">
@@ -113,28 +113,7 @@ export default function TriageHUD({ data }) {
           </div>
         </div>
 
-        {/* Card 2: Epistemic Uncertainty */}
-        <div className="glass-card rounded-2xl p-5 border border-slate-800 flex flex-col justify-between">
-          <div className="flex items-center justify-between text-xs text-slate-400 mb-2">
-            <span className="uppercase tracking-wider font-semibold">Epistemic Uncertainty</span>
-            <HelpCircle className="h-4 w-4 text-indigo-400" />
-          </div>
-          <div>
-            <div className="flex items-baseline gap-2">
-              <span className="text-2xl font-black font-mono text-white">
-                {epistemic_variance.toFixed(6)}
-              </span>
-              <span className="text-xs text-slate-400 font-medium">
-                (MC Dropout Var)
-              </span>
-            </div>
-            <p className="text-xs text-slate-400 mt-2 leading-relaxed">
-              Calculated over 15 stochastic MC forward passes. Safety cutoff threshold is <code className="text-sky-300 font-mono">0.0200</code>.
-            </p>
-          </div>
-        </div>
-
-        {/* Card 3: Dominant Quadrant Attribution */}
+        {/* Card 2: Dominant Quadrant Attribution */}
         <div className="glass-card rounded-2xl p-5 border border-slate-800 flex flex-col justify-between">
           <div className="flex items-center justify-between text-xs text-slate-400 mb-2">
             <span className="uppercase tracking-wider font-semibold">Focal Attribution</span>

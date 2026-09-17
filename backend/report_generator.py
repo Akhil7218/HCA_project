@@ -53,7 +53,7 @@ The report MUST contain the following 4 numbered sections formatted cleanly in M
    - IF triage status is "SAFE_FOR_TRIAGE" (variance <= 0.02): Indicate high epistemic certainty; proceed with standard clinical workflow based on impression.
    - IF triage status is "FLAG_MANUAL_REVIEW" (variance > 0.02): State clearly that model uncertainty exceeds acceptable clinical confidence threshold; flag for immediate urgent manual radiologist review before clinical decision-making.
 
-Maintain a formal, objective, professional medical tone. Include a standard AI Diagnostic Assistance Disclaimer at the very end of the report.
+Maintain a formal, objective, professional medical tone.
 """
 
         # Check API key dynamically
@@ -117,7 +117,4 @@ Maintain a formal, objective, professional medical tone. Include a standard AI D
 {impression_text}
 
 ### 4. RECOMMENDED TRIAGE ACTION
-{triage_action_text}
-
----
-*Disclaimer: PneumoScan AI is an automated clinical decision support tool designed to assist healthcare professionals. It does not replace independent radiological interpretation or primary physician judgment.*"""
+{triage_action_text}"""

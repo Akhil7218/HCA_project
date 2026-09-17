@@ -109,15 +109,10 @@ export default function TriageClinicalPanel({ analysisData, isLoading }) {
         )}
 
         {/* Key Metrics Summary Bar */}
-        <div className="grid grid-cols-3 gap-2 pt-2 border-t border-zinc-800/80 text-xs font-mono-tabular">
+        <div className="grid grid-cols-2 gap-2 pt-2 border-t border-zinc-800/80 text-xs font-mono-tabular">
           <div className="bg-zinc-950/80 p-2.5 rounded-lg border border-zinc-800/60">
             <div className="text-[10px] text-zinc-500 uppercase">Probability</div>
             <div className="text-sm font-semibold text-zinc-200 mt-0.5">{probPct}%</div>
-          </div>
-
-          <div className="bg-zinc-950/80 p-2.5 rounded-lg border border-zinc-800/60">
-            <div className="text-[10px] text-zinc-500 uppercase">MC Variance</div>
-            <div className="text-sm font-semibold text-zinc-200 mt-0.5">{epistemic_variance.toFixed(6)}</div>
           </div>
 
           <div className="bg-zinc-950/80 p-2.5 rounded-lg border border-zinc-800/60">
@@ -210,12 +205,6 @@ export default function TriageClinicalPanel({ analysisData, isLoading }) {
               </ReactMarkdown>
             </div>
           )}
-        </div>
-
-        {/* Footer info */}
-        <div className="pt-2 border-t border-zinc-800/80 text-[10px] text-zinc-500 flex justify-between items-center no-print">
-          <span>AI Clinical Decision Support Engine &bull; Gemini 2.5 Flash</span>
-          <span>Verified Workstation Output</span>
         </div>
 
       </div>
